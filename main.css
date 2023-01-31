@@ -1,0 +1,37 @@
+#welcome{
+    background-color: lightgray;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+
+}
+#container {
+    margin-top: 50px;
+    text-align: center;
+    border-color: black;
+}
+.cardsBoxes{
+    border-style: dashed;
+    padding: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#sortedStudents{
+    border-style: double;
+    float: left;
+    padding: ;
+}
+#theArmy{
+    border-style: groove;
+    float: right;
+
+}
+#filterSection{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.btn-outline-primary{
+    background-color: gray;
+    color: white;
+}
