@@ -3,18 +3,18 @@ const students = [
     {
      id: 1,
      name:'Harry',
-     schoolName:'myhouse',
+     houseName:'myhouse',
      
     },  
     {
      id: 2,
      name: 'Sciffles',
-     schoolName:'test',
+     houseName:'test',
     },
     {
-        id: 2,
-        name: 'Paul',
-        schoolName:'test',
+      id: 2,
+      name: 'Paul',
+      houseName:'test',
     } ,
 
 ];
@@ -44,7 +44,7 @@ const starting = ()=> {
     eventListener();
     hideForm();
 };
-starting();
+// starting();
 
 //Create the students cards
 const cardsOnDom = (array) => {
@@ -57,7 +57,7 @@ const cardsOnDom = (array) => {
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
-              <p class="card-text">${item.schoolName}</p>
+              <p class="card-text">${item.houseName}</p>
               <button type="button" class="btn btn-danger">EXPEL</button>
             </div>
           </div>
@@ -66,4 +66,22 @@ const cardsOnDom = (array) => {
     }
     renderToDom('#sortedStudents', domString);
 }
-cardsOnDom(students);
+// cardsOnDom(students);
+
+//Get info from the form and push it to the array
+//  let studentIdCount =1
+ const form = document.querySelector('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); 
+    let studentIdCount =1
+    const newStudent={
+      id: '${studentIdCount}',
+      name: document.querySelector("#studentName").value,
+      houseName: houses[Math.floor(Math.random()*houses.length)]
+    }  
+    console.log(newStudent);
+    students.push(newStudent); 
+    studentIdCount ++
+    cardsOnDom(students)
+    form.reset();
+  });
