@@ -10,23 +10,26 @@
     text-align: center;
     border-color: black;
 }
-/* .cardsBoxes{
-    border-style: dashed;
-    padding: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-} */
+.showCards{
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: center;
+    gap: 20px;
+    
+}
 #sortedStudents{
     border-style: double;
-    float: left;
- 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    flex: 1;
 }
 #theArmy{
-    border-style: groove;
-    float: right;
+   border-style:solid ;
+   display: flex;
+   flex: 1;
 
-}
+} 
 #filterSection{
     margin-top: 25px;
     margin-bottom: 25px;
@@ -40,6 +43,12 @@
 }
 #demobox {
     background-color: blue ;
-    padding: 10px ;
+    padding: 20px ;
     border: 1px solid black ;
+  }
+  .card-title{
+    inline-size: 105px;
+  }
+  .card-text{
+    inline-size: 105px;
   }
