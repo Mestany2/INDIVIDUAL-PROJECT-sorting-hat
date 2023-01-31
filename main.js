@@ -1,8 +1,23 @@
 const houses=['Gryffindor', 'Slytherin', 'Ravenclaw','Hufflepuff'];
-const students=[{
-    name: Harry,
-    schoolName: myhouse
-}];
+const students = [
+    {
+     id: 1,
+     name:'Harry',
+     schoolName:'myhouse',
+     
+    },  
+    {
+     id: 2,
+     name: 'Sciffles',
+     schoolName:'test',
+    },
+    {
+        id: 2,
+        name: 'Sciffles',
+        schoolName:'test',
+    } ,
+
+];
 const expelledStudents =[];
 
 //Show items on the DOM
@@ -29,22 +44,21 @@ const starting = ()=> {
     eventListener();
     hideForm();
 };
-// starting();
+starting();
 
 //Create the students cards
 const cardsOnDom = (array) => {
     let domString =''
     for (const item of array){
-        domstring +=`<div class="card mb-3" style="max-width: 540px;">
+        domString +=`<div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
-          <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="...">
+          <div id="demobox">
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
               <p class="card-text">${item.schoolName}</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <button type="button" class="btn btn-danger">EXPEL</button>
             </div>
           </div>
         </div>

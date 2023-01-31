@@ -10,17 +10,17 @@
     text-align: center;
     border-color: black;
 }
-.cardsBoxes{
+/* .cardsBoxes{
     border-style: dashed;
     padding: 300px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-}
+} */
 #sortedStudents{
     border-style: double;
     float: left;
-    padding: ;
+ 
 }
 #theArmy{
     border-style: groove;
@@ -35,3 +35,11 @@
     background-color: gray;
     color: white;
 }
+.col-md-4{
+    background-color: blue;
+}
+#demobox {
+    background-color: blue ;
+    padding: 10px ;
+    border: 1px solid black ;
+  }
