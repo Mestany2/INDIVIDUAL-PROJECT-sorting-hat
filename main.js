@@ -13,7 +13,7 @@ const students = [
     },
     {
         id: 2,
-        name: 'Sciffles',
+        name: 'Paul',
         schoolName:'test',
     } ,
 
