@@ -30,9 +30,23 @@
    display: flex;
    flex: 1;
    flex-wrap: wrap;
-    justify-content: center;
+   justify-content: center;
     gap: 2px;
 } 
+
+.firstT{
+    display: flex;
+    justify-content: center;
+    
+    gap:35%;
+}
+.year{
+    border-style: solid
+    ;
+}
+.voldy{
+    border-style: solid;
+}
 #filterSection{
     margin-top: 25px;
     margin-bottom: 25px;
@@ -56,9 +70,6 @@
   .card-text{
     inline-size: 105px;
   }
-h3{
-    margin-bottom: 15px;
-}
 .intro{
     font-family: 'Harry Potter', sans-serif;
 }
@@ -66,7 +77,13 @@ h3{
     display: flex;
 }
 #logoImage{
-    width: 75%;
-    height: 100px;
-    align-self: center;
+    width: 100%;
+    height: 110px;
+    
+}
+.card-mb-3{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-wrap: wrap;
 }

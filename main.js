@@ -62,7 +62,7 @@ const voldyOnDom = (array) => {
           <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text">${item.houseName}</p>
-            <h6> Expelled </h6>
+            <h6 class="card-text"> Expelled </h6>
           </div>
         </div>
       </div>
