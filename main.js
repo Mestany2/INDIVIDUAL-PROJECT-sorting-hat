@@ -1,28 +1,5 @@
 const houses=['Gryffindor', 'Slytherin', 'Ravenclaw','Hufflepuff'];
-const students = [
-    // {
-    //  id: 1,
-    //  name:'Harry',
-    //  houseName:'Ravenclaw',
-     
-    // },  
-    // {
-    //  id: 2,
-    //  name: 'Sciffles',
-    //  houseName:'Gryffindor',
-    // },
-    // {
-    //   id: 3,
-    //   name: 'Paul',
-    //   houseName:'Hufflepuff',
-    // } ,
-    // {
-    //   id: 4,
-    //   name: 'Jack',
-    //   houseName:'Slytherin',
-    // } ,
-
-];
+const students = [];
 const expelledStudents =[];
 
 //Show items on the DOM
@@ -49,16 +26,15 @@ const starting = ()=> {
     eventListener();
     hideForm();
 };
-starting();
+// starting();
 
 //Create the students cards for First Year
 const cardsOnDom = (array) => {
     let domString =''
     for (const item of array){
-        domString +=`<div class="card mb-3" style="max-width: 540px;">
+        domString +=`<div class="card-mb-3" style="max-width: 540px;">
         <div class="row g-0">
-          <div id="demobox">
-          </div>
+          <img src="${item.logo}" id="logoImage">
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
@@ -106,6 +82,15 @@ const voldyOnDom = (array) => {
       name: document.querySelector("#studentName").value,
       houseName: houses[Math.floor(Math.random()*houses.length)]
     }  
+      if (newStudent.houseName === "Hufflepuff"){
+      newStudent.logo = "Huffle.png"
+    } else if(newStudent.houseName === "Gryffindor"){
+      newStudent.logo ="Gryffindor-Logo.png"
+    } else if (newStudent.houseName === "Ravenclaw"){
+      newStudent.logo ="raven.png" 
+    } else if (newStudent.houseName === "Slytherin"){
+      newStudent.logo ="slytherin.png"
+    }      
     console.log(newStudent);
     students.push(newStudent); 
     studentIdCount ++
