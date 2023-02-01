@@ -26,7 +26,7 @@ const starting = ()=> {
     eventListener();
     hideForm();
 };
-// starting();
+starting();
 
 //Create the students cards for First Year
 const cardsOnDom = (array) => {
