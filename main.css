@@ -10,6 +10,15 @@
     margin-top: 50px;
     text-align: center;
     border-color: black;
+   
+}
+.filterArea{
+    margin-left: 20px;
+    margin-right: 20px ;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    background-color: lightblue;
 }
 .showCards{
     display: flex; 
@@ -87,4 +96,7 @@
     justify-content: center;
     flex: 1;
     flex-wrap: wrap;
+}
+.btn-group{
+    width: 100%;
 }
