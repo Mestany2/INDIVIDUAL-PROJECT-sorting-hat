@@ -1,9 +1,9 @@
 const houses=['Gryffindor', 'Slytherin', 'Ravenclaw','Hufflepuff'];
 const students = [
     {
-     id: 5,
+     id: 1,
      name:'Harry',
-     houseName:'myhouse',
+     houseName:'Ravenclaw',
      
     },  
     {
@@ -12,9 +12,14 @@ const students = [
      houseName:'Gryffindor',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Paul',
-      houseName:'test',
+      houseName:'Hufflepuff',
+    } ,
+    {
+      id: 4,
+      name: 'Jack',
+      houseName:'Slytherin',
     } ,
 
 ];
@@ -120,12 +125,81 @@ cardDiv.addEventListener("click", (event)=>{
       // item.houseName = 'VolyArmy';
       cardsOnDom(students)
       voldyOnDom(expelledStudents)
-      console.log(expelledStudents)
-    };
-  });
+      };
+    });
   };
 });
-  
+
+//Filter buttons
+//Select the buttons
+const showAll = document.querySelector("#allBtn");
+const showGryff = document.querySelector("#gryffBtn");
+const showHuff = document.querySelector("#huffBtn");
+const showRaven = document.querySelector("#ravenBtn");
+const showSlyth = document.querySelector("#slythBtn");
+
+
+//filter function
+const filter = (array, typeString)=>{
+  const typeArray = []
+ for (const student of array) {
+  //If the pet typ match the specified type, then add it in the new array
+  if (student.houseName === typeString) {
+    typeArray.push(student);
+  }
+}
+return typeArray;
+};
+
+
+//When clicked, filter GRYFFINDOR
+showGryff.addEventListener("click", ()=>{
+  const gHouse= filter(students, "Gryffindor");
+  console.log(gHouse);
+  cardsOnDom(gHouse);
+  const gaHouse = filter(expelledStudents, "Gryffindor");
+  voldyOnDom(gaHouse);
+});
+
+//HUFFLEPUFF
+showHuff.addEventListener("click", ()=>{
+  const hHouse= filter(students, "Hufflepuff");
+  console.log(hHouse);
+  cardsOnDom(hHouse)
+  const haHouse = filter(expelledStudents, "Hufflepuff");
+  voldyOnDom(haHouse);
+});
+
+//Ravenclaw
+showRaven.addEventListener("click", ()=>{
+  const rHouse= filter(students, "Ravenclaw");
+  console.log(rHouse)
+  cardsOnDom(rHouse)
+  const raHouse = filter(expelledStudents, "Ravenclaw");
+  voldyOnDom(raHouse);
+})
+
+//Slytherin
+showSlyth.addEventListener("click", ()=>{
+  const sHouse= filter(students, "Slytherin");
+  console.log(sHouse)
+  cardsOnDom(sHouse)
+  const saHouse = filter(expelledStudents, "Slytherin");
+  voldyOnDom(saHouse);
+})
+
+//AlL
+showAll.addEventListener("click", ()=>{
+  cardsOnDom(students);
+  voldyOnDom(expelledStudents)
+}
+)
+
+
+
+
+
+
 
 
 
