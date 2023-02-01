@@ -10,26 +10,47 @@
     text-align: center;
     border-color: black;
 }
-/* .cardsBoxes{
-    border-style: dashed;
-    padding: 300px;
+.showCards{
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: center;
+    gap: 20px;
+    
+}
+#sortedStudents{
+    border-style: solid;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-} */
-#sortedStudents{
-    border-style: double;
-    float: left;
- 
+    justify-content: center;
+    gap: 2px;
+    flex: 1;
 }
 #theArmy{
-    border-style: groove;
-    float: right;
+   border-style:solid ;
+   display: flex;
+   flex: 1;
+   flex-wrap: wrap;
+   justify-content: center;
+    gap: 2px;
+} 
 
+.firstT{
+    display: flex;
+    justify-content: center;
+    
+    gap:35%;
+}
+.year{
+    border-style: solid
+    ;
+}
+.voldy{
+    border-style: solid;
 }
 #filterSection{
     margin-top: 25px;
     margin-bottom: 25px;
+   
 }
 .btn-outline-primary{
     background-color: gray;
@@ -40,6 +61,29 @@
 }
 #demobox {
     background-color: blue ;
-    padding: 10px ;
+    padding: 20px ;
     border: 1px solid black ;
   }
+  .card-title{
+    inline-size: 105px;
+  }
+  .card-text{
+    inline-size: 105px;
+  }
+.intro{
+    font-family: 'Harry Potter', sans-serif;
+}
+.title{
+    display: flex;
+}
+#logoImage{
+    width: 100%;
+    height: 110px;
+    
+}
+.card-mb-3{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-wrap: wrap;
+}

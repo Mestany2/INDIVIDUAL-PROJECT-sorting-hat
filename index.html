@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>Sorting Hat!</title>
 </head>
 <body>
     <div id="welcome">
-        <h1>Welcome to Hoggy Hoggy Warts, RELOADED!</h1>
+        <h1 class="intro">Welcome to Hoggy Hoggy Warts, RELOADED!</h1>
             <P> The Sorting Hat is a hat which used to belong to Hogwarts founder Godric Gryffindor. It is now used to sort new students into the four houses: Gryffindor, Hufflepuff, Ravenclaw and Slytherin. <br>
             Enter the names of students below to sort them into the Hogwarts house where they belong
             </P>
@@ -24,26 +25,31 @@
     </div>
 
     <div id="container">
-        <div id="form-entry">
+        <form>
+            <div id="formInput"></div>
             <h2>Enter First Year's Name</h2>
-             <label>Student:</label>
-             <input type="text" placeholder="Name"></input>
-            <button class="btn btn-primary">Sort!</button>
-        </div>
+            <label>Student:</label>
+            <input type="text" id="studentName" placeholder="Name"></input>
+            <button type="submit" id="sorting" class="btn btn-primary">Sort!</button>
+        </form>
         <div id="filterSection">
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-outline-primary">All</button>
-                <button type="button" class="btn btn-danger">Gryffindor</button>
-                <button type="button" class="btn btn-warning">Hufflepuff</button>
-                <button type="button" class="btn btn-primary">Ravenclaw</button>
-                <button type="button" class="btn btn-success">Slytherin</button>
+            <div class="btn-group" id="filterBtn" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-outline-primary" id="allBtn">All</button>
+                <button type="button" class="btn btn-danger" id="gryffBtn">Gryffindor</button>
+                <button type="button" class="btn btn-warning" id="huffBtn">Hufflepuff</button>
+                <button type="button" class="btn btn-primary" id="ravenBtn">Ravenclaw</button>
+                <button type="button" class="btn btn-success" id="slythBtn">Slytherin</button>
               </div>
         </div>
-        <div class="cardsBoxes">
-         <div id="sortedStudents">
-            <h3>First Year's</h3>
-         </div>
-         <div id="theArmy">ARMYgadskjughfsjagnhljkhn;</div>
+        <div class="firstT">
+            <h3 class="year">First Year's Students</h3> 
+            <h3 class="voldy"> The Moldy Voldy Army</h3>
+        </div>
+        <div class="showCards">
+            <div id="sortedStudents">
+            </div>
+            <div id="theArmy">
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
