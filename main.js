@@ -28,7 +28,7 @@ const starting = ()=> {
 };
 starting();
 
-//Create the students cards for First Year
+//Create the students cards for First Year's Student
 const cardsOnDom = (array) => {
     let domString =''
     for (const item of array){
@@ -47,31 +47,28 @@ const cardsOnDom = (array) => {
     }
     renderToDom('#sortedStudents', domString);
 }
-
-
-
-//Create Cards for Voldy Army
+//Create Cards for Voldy Army Dark Side
 const voldyOnDom = (array) => {
   let domString =''
   for (const item of array){
-      domString +=`<div class="card mb-3" style="max-width: 540px;">
+      domString +=`<div class="card mb-3" style="width: 14rem;">
       <div class="row g-0">
-        <div id="demobox">
+        <div class="col-md-4">
+          <img src="voldy.jpg" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${item.houseName}</p>
-            <h6 class="card-text"> Expelled </h6>
+            <p class="card-text">Unfortunatley <strong>${item.name}</strong> went over to the dark side!</p>
+            <p class="card-text">From House ${item.houseName}</p>
           </div>
         </div>
       </div>
-    </div>`;
+    </div>`
   }
   renderToDom('#theArmy', domString);
 }
 
-//empty field
+//If input is blank, show an alert message
 const blankAlert = () => {
   let domString = ``;
   domString += 
@@ -83,7 +80,7 @@ const blankAlert = () => {
 };
 
 
-//Get info from the form and push it to the array
+//Get info from the form and push it to the array, if blank show an alert
  let studentIdCount = 1
  const form = document.querySelector('form');
  const text = document.getElementById('studentName')
@@ -117,7 +114,7 @@ const blankAlert = () => {
 
 
 
-//Expelled students 
+//Expelled button
 const cardDiv=document.querySelector("#sortedStudents");
 cardDiv.addEventListener("click", (event)=>{
   if (event.target.id.includes ("expel")){
@@ -146,7 +143,6 @@ const showSlyth = document.querySelector("#slythBtn");
 const filter = (array, typeString)=>{
   const typeArray = []
  for (const student of array) {
-  //If the pet typ match the specified type, then add it in the new array
   if (student.houseName === typeString) {
     typeArray.push(student);
   }
