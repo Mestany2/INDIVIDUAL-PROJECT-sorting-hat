@@ -21,6 +21,7 @@
     border-style: double;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2px;
     flex: 1;
 }
@@ -52,3 +53,6 @@
   .card-text{
     inline-size: 105px;
   }
+h3{
+    margin-bottom: 15px;
+}

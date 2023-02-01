@@ -1,7 +1,7 @@
 const houses=['Gryffindor', 'Slytherin', 'Ravenclaw','Hufflepuff'];
 const students = [
     {
-     id: 1,
+     id: 5,
      name:'Harry',
      houseName:'myhouse',
      
@@ -9,7 +9,7 @@ const students = [
     {
      id: 2,
      name: 'Sciffles',
-     houseName:'test',
+     houseName:'Gryffindor',
     },
     {
       id: 2,
@@ -39,14 +39,14 @@ const eventListener = () => {
     startBtn.addEventListener('click', showForm)
 };
 
-//Hide the form and call the function for the button
-const starting = ()=> {
-    eventListener();
-    hideForm();
-};
+// //Hide the form and call the function for the button
+// const starting = ()=> {
+//     eventListener();
+//     hideForm();
+// };
 // starting();
 
-//Create the students cards
+//Create the students cards for First Year
 const cardsOnDom = (array) => {
     let domString =''
     for (const item of array){
@@ -58,7 +58,7 @@ const cardsOnDom = (array) => {
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
               <p class="card-text">${item.houseName}</p>
-              <button type="button" class="btn btn-danger">EXPEL</button>
+              <button type="button" class="btn btn-danger" id= "expel--${item.id}">EXPEL</button>
             </div>
           </div>
         </div>
@@ -66,16 +66,38 @@ const cardsOnDom = (array) => {
     }
     renderToDom('#sortedStudents', domString);
 }
-// cardsOnDom(students);
+cardsOnDom(students);
+
+
+//Create Cards for Voldy Army
+const voldyOnDom = (array) => {
+  let domString =''
+  for (const item of array){
+      domString +=`<div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div id="demobox">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">${item.name}</h5>
+            <p class="card-text">${item.houseName}</p>
+            <button type="button" class="btn btn-danger" id= "expel--${item.id}">EXPEL</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }
+  renderToDom('#theArmy', domString);
+}
+voldyOnDom(expelledStudents);
 
 //Get info from the form and push it to the array
-//  let studentIdCount =1
+ let studentIdCount = 1
  const form = document.querySelector('form');
   form.addEventListener('submit', (e) => {
     e.preventDefault(); 
-    let studentIdCount =1
     const newStudent={
-      id: '${studentIdCount}',
+      id: studentIdCount,
       name: document.querySelector("#studentName").value,
       houseName: houses[Math.floor(Math.random()*houses.length)]
     }  
@@ -85,3 +107,36 @@ const cardsOnDom = (array) => {
     cardsOnDom(students)
     form.reset();
   });
+
+//Expelled students 
+const cardDiv=document.querySelector("#sortedStudents");
+cardDiv.addEventListener("click", (event)=>{
+  if (event.target.id.includes ("expel")){
+    const[,studentId]= event.target.id.split("--");
+    students.forEach((item, index) => { 
+      if (item.id  === Number(studentId)){
+      expelledStudents.push(item);
+      students.splice(index, 1);
+      item.houseName = 'VolyArmy';
+      cardsOnDom(students)
+      voldyOnDom(expelledStudents)
+      console.log(expelledStudents)
+    };
+  });
+  };
+});
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
