@@ -81,7 +81,7 @@ const voldyOnDom = (array) => {
           <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text">${item.houseName}</p>
-            <button type="button" class="btn btn-danger" id= "expel--${item.id}">EXPEL</button>
+            <h6> Expelled </h6>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@ cardDiv.addEventListener("click", (event)=>{
       if (item.id  === Number(studentId)){
       expelledStudents.push(item);
       students.splice(index, 1);
-      item.houseName = 'VolyArmy';
+      // item.houseName = 'VolyArmy';
       cardsOnDom(students)
       voldyOnDom(expelledStudents)
       console.log(expelledStudents)
