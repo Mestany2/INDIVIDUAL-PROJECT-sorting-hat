@@ -1,26 +1,26 @@
 const houses=['Gryffindor', 'Slytherin', 'Ravenclaw','Hufflepuff'];
 const students = [
-    {
-     id: 1,
-     name:'Harry',
-     houseName:'Ravenclaw',
+    // {
+    //  id: 1,
+    //  name:'Harry',
+    //  houseName:'Ravenclaw',
      
-    },  
-    {
-     id: 2,
-     name: 'Sciffles',
-     houseName:'Gryffindor',
-    },
-    {
-      id: 3,
-      name: 'Paul',
-      houseName:'Hufflepuff',
-    } ,
-    {
-      id: 4,
-      name: 'Jack',
-      houseName:'Slytherin',
-    } ,
+    // },  
+    // {
+    //  id: 2,
+    //  name: 'Sciffles',
+    //  houseName:'Gryffindor',
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Paul',
+    //   houseName:'Hufflepuff',
+    // } ,
+    // {
+    //   id: 4,
+    //   name: 'Jack',
+    //   houseName:'Slytherin',
+    // } ,
 
 ];
 const expelledStudents =[];
@@ -45,11 +45,11 @@ const eventListener = () => {
 };
 
 // //Hide the form and call the function for the button
-// const starting = ()=> {
-//     eventListener();
-//     hideForm();
-// };
-// starting();
+const starting = ()=> {
+    eventListener();
+    hideForm();
+};
+starting();
 
 //Create the students cards for First Year
 const cardsOnDom = (array) => {
