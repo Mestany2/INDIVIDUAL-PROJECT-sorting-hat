@@ -71,7 +71,7 @@ const cardsOnDom = (array) => {
     }
     renderToDom('#sortedStudents', domString);
 }
-cardsOnDom(students);
+
 
 
 //Create Cards for Voldy Army
@@ -94,7 +94,7 @@ const voldyOnDom = (array) => {
   }
   renderToDom('#theArmy', domString);
 }
-voldyOnDom(expelledStudents);
+
 
 //Get info from the form and push it to the array
  let studentIdCount = 1
@@ -122,7 +122,6 @@ cardDiv.addEventListener("click", (event)=>{
       if (item.id  === Number(studentId)){
       expelledStudents.push(item);
       students.splice(index, 1);
-      // item.houseName = 'VolyArmy';
       cardsOnDom(students)
       voldyOnDom(expelledStudents)
       };
@@ -155,7 +154,6 @@ return typeArray;
 //When clicked, filter GRYFFINDOR
 showGryff.addEventListener("click", ()=>{
   const gHouse= filter(students, "Gryffindor");
-  console.log(gHouse);
   cardsOnDom(gHouse);
   const gaHouse = filter(expelledStudents, "Gryffindor");
   voldyOnDom(gaHouse);
@@ -164,8 +162,7 @@ showGryff.addEventListener("click", ()=>{
 //HUFFLEPUFF
 showHuff.addEventListener("click", ()=>{
   const hHouse= filter(students, "Hufflepuff");
-  console.log(hHouse);
-  cardsOnDom(hHouse)
+  cardsOnDom(hHouse);
   const haHouse = filter(expelledStudents, "Hufflepuff");
   voldyOnDom(haHouse);
 });
@@ -173,8 +170,7 @@ showHuff.addEventListener("click", ()=>{
 //Ravenclaw
 showRaven.addEventListener("click", ()=>{
   const rHouse= filter(students, "Ravenclaw");
-  console.log(rHouse)
-  cardsOnDom(rHouse)
+  cardsOnDom(rHouse);
   const raHouse = filter(expelledStudents, "Ravenclaw");
   voldyOnDom(raHouse);
 })
@@ -182,8 +178,7 @@ showRaven.addEventListener("click", ()=>{
 //Slytherin
 showSlyth.addEventListener("click", ()=>{
   const sHouse= filter(students, "Slytherin");
-  console.log(sHouse)
-  cardsOnDom(sHouse)
+  cardsOnDom(sHouse);
   const saHouse = filter(expelledStudents, "Slytherin");
   voldyOnDom(saHouse);
 })

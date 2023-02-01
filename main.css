@@ -18,7 +18,7 @@
     
 }
 #sortedStudents{
-    border-style: double;
+    border-style: solid;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -58,4 +58,10 @@
   }
 h3{
     margin-bottom: 15px;
+}
+.intro{
+    font-family: 'Harry Potter', sans-serif;
+}
+.title{
+    display: flex;
 }
