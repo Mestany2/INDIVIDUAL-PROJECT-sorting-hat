@@ -54,19 +54,19 @@ const cardsOnDom = (array) => {
 const voldyOnDom = (array) => {
   let domString =''
   for (const item of array){
-      domString +=`<div class="card mb-3" style="max-width: 540px;">
+      domString +=`<div class="card mb-3" style="width: 14rem;">
       <div class="row g-0">
-        <div id="demobox">
+        <div class="col-md-4">
+          <img src="voldy.jpg" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${item.houseName}</p>
-            <h6 class="card-text"> Expelled </h6>
+            <p class="card-text">Unfortunatley <strong>${item.name}</strong> went over to the dark side!</p>
+            <p class="card-text">From House ${item.houseName}</p>
           </div>
         </div>
       </div>
-    </div>`;
+    </div>`
   }
   renderToDom('#theArmy', domString);
 }
