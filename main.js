@@ -71,13 +71,29 @@ const voldyOnDom = (array) => {
   renderToDom('#theArmy', domString);
 }
 
+//empty field
+const blankAlert = () => {
+  let domString = ``;
+  domString += 
+    `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Gulpin gargoyles!!</strong> You must enter a student name in the field below before you sort.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>`;
+  renderToDom('#formInput', domString);
+};
+
 
 //Get info from the form and push it to the array
  let studentIdCount = 1
  const form = document.querySelector('form');
+ const text = document.getElementById('studentName')
   form.addEventListener('submit', (e) => {
     e.preventDefault(); 
-    const newStudent={
+    let textField= text.value
+    if (textField === ''){
+      blankAlert();
+    } else {
+      const newStudent={
       id: studentIdCount,
       name: document.querySelector("#studentName").value,
       houseName: houses[Math.floor(Math.random()*houses.length)]
@@ -90,13 +106,16 @@ const voldyOnDom = (array) => {
       newStudent.logo ="raven.png" 
     } else if (newStudent.houseName === "Slytherin"){
       newStudent.logo ="slytherin.png"
-    }      
+    };
     console.log(newStudent);
     students.push(newStudent); 
     studentIdCount ++
     cardsOnDom(students)
     form.reset();
+  }
   });
+
+
 
 //Expelled students 
 const cardDiv=document.querySelector("#sortedStudents");
