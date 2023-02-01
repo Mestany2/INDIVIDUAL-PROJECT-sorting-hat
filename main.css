@@ -3,12 +3,22 @@
     text-align: center;
     margin-bottom: 10px;
     padding-bottom: 50px;
+    padding-top: 50px;
 
 }
 #container {
     margin-top: 50px;
     text-align: center;
     border-color: black;
+   
+}
+.filterArea{
+    margin-left: 20px;
+    margin-right: 20px ;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    background-color: lightblue;
 }
 .showCards{
     display: flex; 
@@ -60,7 +70,7 @@
     background-color: blue;
 }
 #demobox {
-    background-color: blue ;
+    background-color: red ;
     padding: 20px ;
     border: 1px solid black ;
   }
@@ -86,4 +96,7 @@
     justify-content: center;
     flex: 1;
     flex-wrap: wrap;
+}
+.btn-group{
+    width: 100%;
 }
