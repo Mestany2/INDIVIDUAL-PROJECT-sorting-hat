@@ -130,13 +130,32 @@ cardDiv.addEventListener("click", (event)=>{
   };
 });
 
-//Filter buttons
+
 //Select the buttons
 const showAll = document.querySelector("#allBtn");
 const showGryff = document.querySelector("#gryffBtn");
 const showHuff = document.querySelector("#huffBtn");
 const showRaven = document.querySelector("#ravenBtn");
 const showSlyth = document.querySelector("#slythBtn");
+const sortAlpha = document.querySelector('#btnradio1')
+const sortHouse= document.querySelector('#btnradio2')
+
+//Sorting Alpha
+sortAlpha.addEventListener("click", ()=>{
+const studentsSorted = students.sort((a, b) => (a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1));
+const armySorted = expelledStudents.sort((a, b) => (a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1));
+cardsOnDom(studentsSorted);
+voldyOnDom(armySorted);
+});
+
+//Sorting by Houses
+sortHouse.addEventListener("click", ()=>{
+  const studentsSortedH = students.sort((a, b) => (a.houseName.toUpperCase() < b.houseName.toUpperCase() ? -1 : 1));
+  const armySortedH = expelledStudents.sort((a, b) => (a.houseName.toUpperCase() < b.houseName.toUpperCase() ? -1 : 1));
+  cardsOnDom(studentsSortedH);
+  voldyOnDom(armySortedH);
+  });
+
 
 
 //filter function
@@ -150,6 +169,8 @@ const filter = (array, typeString)=>{
 return typeArray;
 };
 
+//Sorting cards
+
 
 //When clicked, filter GRYFFINDOR
 showGryff.addEventListener("click", ()=>{
@@ -159,7 +180,7 @@ showGryff.addEventListener("click", ()=>{
   voldyOnDom(gaHouse);
 });
 
-//HUFFLEPUFF
+//Filter HUFFLEPUFF
 showHuff.addEventListener("click", ()=>{
   const hHouse= filter(students, "Hufflepuff");
   cardsOnDom(hHouse);
@@ -167,7 +188,7 @@ showHuff.addEventListener("click", ()=>{
   voldyOnDom(haHouse);
 });
 
-//Ravenclaw
+//Filter Ravenclaw
 showRaven.addEventListener("click", ()=>{
   const rHouse= filter(students, "Ravenclaw");
   cardsOnDom(rHouse);
@@ -175,7 +196,7 @@ showRaven.addEventListener("click", ()=>{
   voldyOnDom(raHouse);
 })
 
-//Slytherin
+//Filter Slytherin
 showSlyth.addEventListener("click", ()=>{
   const sHouse= filter(students, "Slytherin");
   cardsOnDom(sHouse);
@@ -183,7 +204,7 @@ showSlyth.addEventListener("click", ()=>{
   voldyOnDom(saHouse);
 })
 
-//AlL
+//Filter All
 showAll.addEventListener("click", ()=>{
   cardsOnDom(students);
   voldyOnDom(expelledStudents)
