@@ -29,22 +29,21 @@
     
 }
 #sortedStudents{
-    border-style: solid;
     display: flex;
     flex-wrap: wrap;
+    padding: 75px;
     justify-content: center;
     gap: 2px;
     flex: 1;
-
     backdrop-filter: blur(0px); 
     background-color: rgba(255, 255, 255, 0); 
     border-radius: 20px; 
     box-shadow: 35px 35px 68px 0px rgba(202, 202, 202, 0.5), inset -0px -0px 16px 0px rgba(202, 202, 202, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
 #theArmy{
-   border-style:solid ;
    display: flex;
    flex: 1;
+   padding: 75px;
    flex-wrap: wrap;
    justify-content: center;
    gap: 2px;
@@ -58,15 +57,7 @@
 .firstT{
     display: flex;
     justify-content: center;
-    
     gap:35%;
-}
-.year{
-    border-style: solid
-    ;
-}
-.voldy{
-    border-style: solid;
 }
 #filterSection{
     margin-top: 25px;
