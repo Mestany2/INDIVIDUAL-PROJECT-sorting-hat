@@ -33,7 +33,7 @@ const cardsOnDom = (array) => {
     let domString =''
     for (const item of array){
         domString +=`<div class="card-mb-3" style="max-width: 540px;">
-        <div class="row g-0">
+        <div class=cardLogo>
           <img src="${item.logo}" id="logoImage">
           <div class="col-md-8">
             <div class="card-body">
