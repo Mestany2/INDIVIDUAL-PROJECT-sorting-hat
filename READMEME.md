@@ -10,10 +10,6 @@ No wireframes were used for this project.
 
 <https://mestany-sorting-hat.netlify.app/>
 
-## Link to the project board
-
-<>
-
 ## Description of the user
 Any user
 
