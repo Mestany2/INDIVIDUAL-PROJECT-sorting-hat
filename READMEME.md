@@ -22,7 +22,7 @@ Any user
 * If you click the Sort button while the test field is blank, an alert message would appear
 * When a student name is entered, a student card is created under the First Year's column and randomly assigned to a Hogwart house
 * Click Expel button to move student to the dark side and the card would move to the Moldy Voldy Army
-* Filtered button are avaliable to show cards that are assigned to a specific house
+* Filtered button are available to show cards that are assigned to a specific house
 
 ## Screenshots of the project
 ![Screenshot](Screenshot.png)
@@ -31,4 +31,4 @@ Any user
 <https://github.com/Mestany2>
 
 ## Link to Loom video walkthrough of the app
-<>
+<https://www.loom.com/share/b675ebec3b414da2ab0d8a4da72a78ba>
