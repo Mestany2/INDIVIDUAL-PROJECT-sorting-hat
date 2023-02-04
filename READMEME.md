@@ -19,7 +19,7 @@ Any user
 * When a student name is entered, a student card is created under the First Year's column and randomly assigned to a Hogwart house
 * Click Expel button to move student to the dark side and the card would move to the Moldy Voldy Army
 * Filtered button are available to show cards that are assigned to a specific house
-
+* User can sort the cards by house or alphabetically  
 ## Screenshots of the project
 ![Screenshot](Screenshot.png)
 
