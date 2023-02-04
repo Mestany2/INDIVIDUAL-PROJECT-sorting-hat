@@ -54,7 +54,7 @@ const voldyOnDom = (array) => {
       domString +=`<div class="card mb-3" style="width: 14rem;">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="voldy.jpg" class="img-fluid rounded-start" alt="...">
+          <img src="Images/voldy.jpg" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -96,13 +96,13 @@ const blankAlert = () => {
       houseName: houses[Math.floor(Math.random()*houses.length)]
     }  
       if (newStudent.houseName === "Hufflepuff"){
-      newStudent.logo = "Huffle.png"
+      newStudent.logo = "Images/Huffle.png"
     } else if(newStudent.houseName === "Gryffindor"){
-      newStudent.logo ="Gryffindor-Logo.png"
+      newStudent.logo ="Images/Gryffindor-Logo.png"
     } else if (newStudent.houseName === "Ravenclaw"){
-      newStudent.logo ="raven.png" 
+      newStudent.logo ="Images/raven.png" 
     } else if (newStudent.houseName === "Slytherin"){
-      newStudent.logo ="slytherin.png"
+      newStudent.logo ="Images/slytherin.png"
     };
     console.log(newStudent);
     students.push(newStudent); 
