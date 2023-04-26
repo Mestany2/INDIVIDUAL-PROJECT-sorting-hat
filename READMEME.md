@@ -20,8 +20,7 @@ Any user
 * Click Expel button to move student to the dark side and the card would move to the Moldy Voldy Army
 * Filtered button are available to show cards that are assigned to a specific house
 * User can sort the cards by house or alphabetically  
-## Screenshots of the project
-![Screenshot](Screenshot.png)
+
 
 ## List of contributors and links to their GH profiles
 <https://github.com/Mestany2>
